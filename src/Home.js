@@ -9,31 +9,57 @@ import './App.css';
 
 function Home() {
 
-  const [voteOne, setVoteOne] = React.useState(0);
-  const [voteTwo, setVoteTwo] = React.useState(0);
-  const [voteThree, setVoteThree] = React.useState(0);
-  const [voteFour, setVoteFour] = React.useState(0);
+  const [vote, setVote] = React.useState(0);
+
+  const [voteArray, setVoteArray] = React.useState([
+      { 
+          id: 1,
+          name : 'Silver James',
+          job :  'Architect & Engineer',
+          img :  img1,
+          vote : 0
+      },
+      { 
+        id: 2,
+        name : 'Glory Dickson',
+        job :  'English Professor',
+        img :  img2,
+        vote : 0
+    },
+    { 
+        id: 3,
+        name : 'Faith May',
+        job :  'Architect & Engineer',
+        img :  img1,
+        vote : 0
+    },
+    { 
+        id: 4,
+        name : 'Kate Kolapo',
+        job :  'Building & Construction',
+        img :  img1,
+        vote : 0
+    }
+  ])
+
   const navigate = useNavigate();
   // React.useEffect(() => {
     
   // },[])
 
   const voteCandidate = (selected) => {
-    console.log('selected', selected);
-    if(selected === 1){
-      setVoteOne(voteOne + 1);
+    let array = voteArray;
+    if(selected){
+        for(let i = 0; i <= array.length; i++){
+            if(array[i].name === selected.name){
+                selected.vote = selected.vote + 1;
+                console.log('selected', selected.vote + 1);
+                setVote(selected.vote + 1);
+                setVoteArray(array);
+            }
+        }
+        navigate('/appreciation');
     }
-    else if(selected === 2){
-      setVoteTwo(voteTwo + 1)
-    }
-    else if(selected === 3){
-      setVoteThree(voteThree + 1)
-    }
-    else if(selected === 4){
-      setVoteFour(voteFour + 1)
-    }
-
-    navigate('/appreciation');
   }
 
   return (
@@ -45,18 +71,21 @@ function Home() {
         <p>Vote for your favorite candidate. <br />While you might believe your one vote out of the hundreds or thousands cast will not make much of a difference, understand that every vote counts.</p>
       </div>
       <header className="App-header">
-        <div className="card">
-          <div className="count">{voteOne}</div>
-            <img src={img1} className="App-logo" alt="logo" />
-            <div className="container">
-              <div>
-                <h4><b>Kate Kolapo</b></h4>
-                <p>Architect & Engineer</p>
+      {voteArray?.map((item) => (
+                <div className="card" key={item.name}>
+                <div className="count" >{item.vote}</div>
+                  <img src={item.img} className="App-logo" alt="logo" />
+                  <div className="container">
+                    <div>
+                      <h4><b>{item.name}</b></h4>
+                      <p>{item.job}</p>
+                    </div>
+                    <button className="vote-btn" onClick={(() => {voteCandidate(item)})}>Vote</button>
+                  </div>
               </div>
-              <button className="vote-btn" onClick={(() => {voteCandidate(1)})}>Vote</button>
-            </div>
-        </div>
-        <div className="card">
+      ))}
+  
+        {/* <div className="card">
         <div className="count">{voteTwo}</div>
             <img src={img2} className="App-logo" alt="logo" />
             <div className="container">
@@ -88,7 +117,7 @@ function Home() {
               </div>
               <button className="vote-btn" onClick={(() => {voteCandidate(4)})}>Vote</button>
             </div>
-        </div>
+        </div> */}
       </header>
  
       </div>

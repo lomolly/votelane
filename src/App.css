@@ -108,6 +108,7 @@ p {
   margin-left: 300px;
   position: absolute;
   text-align: center;
+
   font-size: 16px !important;
   font-weight: 800;
   background-color: #fff;
@@ -138,4 +139,29 @@ p {
 .validation {
   color: red;
   font-weight: 600;
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .App-header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .vote-btn {
+    margin-top: 10px;
+  }
+
+  h4, p {
+    margin: 0;
+    padding: 0;
+  }
 }
