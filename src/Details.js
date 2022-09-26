@@ -11,14 +11,12 @@ const navigate = useNavigate();
 
 const saveDetails = () => {
     setClick(true);
-    console.log('Username', name);
     if(name !== ''){
      navigate('/home');
     }
 }
 
   return (
-
     <div className="App">
       <div className="App-container">
       <div className="title-div">
@@ -38,8 +36,6 @@ const saveDetails = () => {
         <button onClick={(() => { saveDetails()})} className="backhome">Continue</button>
       </div>
       <header className="App-header">
-   
-          {/* <button>Vote for a candidate</button> */}
       </header>
       </div>
     </div>
