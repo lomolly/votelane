@@ -81,45 +81,9 @@ function Home() {
                     <button className="vote-btn" onClick={(() => {voteCandidate(item)})}>Vote</button>
                   </div>
               </div>
-      ))}
-  
-        {/* <div className="card">
-        <div className="count">{voteTwo}</div>
-            <img src={img2} className="App-logo" alt="logo" />
-            <div className="container">
-              <div>
-                <h4><b>Glory Dickson</b></h4>
-                <p>Architect & Engineer</p>
-              </div>
-              <button className="vote-btn" onClick={(() => {voteCandidate(2)})}>Vote</button>
-            </div>
-        </div>
-        <div className="card">
-        <div className="count">{voteThree}</div>
-            <img src={img1} className="App-logo" alt="logo" />
-            <div className="container">
-              <div>
-                <h4><b>Faith May</b></h4>
-                <p>Architect & Engineer</p>
-              </div>
-              <button className="vote-btn"onClick={(() => {voteCandidate(3)})} >Vote</button>
-            </div>
-        </div>
-        <div className="card">
-        <div className="count">{voteFour}</div>
-            <img src={img1} className="App-logo" alt="logo" />
-            <div className="container">
-              <div>
-                <h4><b>Tess Black</b></h4>
-                <p>Architect & Engineer</p>
-              </div>
-              <button className="vote-btn" onClick={(() => {voteCandidate(4)})}>Vote</button>
-            </div>
-        </div> */}
+         ))}
       </header>
- 
       </div>
-  
     </div>
   );
 }
