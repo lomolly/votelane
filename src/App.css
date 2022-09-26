@@ -1,26 +1,33 @@
 .App {
-  text-align: center;
+  height: 1000px;
+  /* text-align: center; */
 }
 
 .App-logo {
-  height: 40vmin;
+  /* height: 30vmin; */
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+} */
+
+.App-container {
+  background-color: rgb(236, 233, 233);
 }
 
 .App-header {
-  background-color: #282c34;
+  /* background-color: rgb(236, 233, 233); */
+  /* background-color: #282c34; */
   min-height: 100vh;
+  padding: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  /* flex-direction: column; */
+  /* align-items: center; */
+  justify-content: space-around;
+  /* font-size: calc(10px + 2vmin); */
   color: white;
 }
 
@@ -28,11 +35,86 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
+/* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+} */
+
+h3 {
+ font-style: italic;
+ font-size: 32px !important;
+}
+
+span {
+   color: rgb(18, 157, 167);
+   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+p {
+  color: grey;
+}
+.title-div{
+  text-align: center;
+  margin: 12px;
+  padding: 12px;
+}
+
+.copyright{
+  text-align: center;
+}
+
+.title-div h3 {
+
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 20%;
+  height: 350px;
+  color: grey;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 16px;
+}
+
+.vote-btn {
+  margin-top: 20px;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  background-color: rgb(20, 163, 173);
+  border-radius: 2px;
+  border: 2px solid rgb(18, 157, 167);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.count {
+  padding: 6px;
+  width: 20px;
+  margin-left: 300px;
+  position: absolute;
+  text-align: center;
+  font-size: 16px !important;
+  font-weight: 800;
+  background-color: #fff;
+  color: rgb(18, 157, 167);
+  /* border-radius: 100%; */
 }
