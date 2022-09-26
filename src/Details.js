@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import './App.css';
 
@@ -27,7 +27,7 @@ const saveDetails = () => {
         <div className="form-part">
             <h5>Enter your name</h5>
             <input type="text" className="formdata" name="name" onChange={event => setName(event.target.value)}/>
-            {click == true && name == '' &&
+            {click === true && name === '' &&
                 <h6 className="validation">Name is required</h6>
             } 
             <br />

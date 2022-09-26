@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import img1 from './assets/img3.jpeg';
 import img2 from './assets/img4.jpeg';
-import img3 from './assets/img6.jpeg';
-import {Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 
 
 import './App.css';
@@ -22,16 +20,16 @@ function Home() {
 
   const voteCandidate = (selected) => {
     console.log('selected', selected);
-    if(selected == 1){
+    if(selected === 1){
       setVoteOne(voteOne + 1);
     }
-    else if(selected == 2){
+    else if(selected === 2){
       setVoteTwo(voteTwo + 1)
     }
-    else if(selected == 3){
+    else if(selected === 3){
       setVoteThree(voteThree + 1)
     }
-    else if(selected == 4){
+    else if(selected === 4){
       setVoteFour(voteFour + 1)
     }
 
