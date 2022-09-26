@@ -56,9 +56,10 @@ function Home() {
                 console.log('selected', selected.vote + 1);
                 setVote(selected.vote + 1);
                 setVoteArray(array);
+                navigate('/appreciation');
             }
         }
-        navigate('/appreciation');
+        
     }
   }
 
