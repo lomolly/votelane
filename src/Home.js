@@ -43,9 +43,6 @@ function Home() {
   ])
 
   const navigate = useNavigate();
-  // React.useEffect(() => {
-    
-  // },[])
 
   const voteCandidate = (selected) => {
     let array = voteArray;
